@@ -14,7 +14,7 @@ RUN yum -y --setopt=tsflags=nodocs install httpd && \
 EXPOSE 80
 
 # Simple startup script to avoid issues with container restart
-ADD https://github.com/theinternerd/m3shttpd/blob/master/run-httpd.sh /run-httpd.sh
+ADD run-httpd.sh /run-httpd.sh
 RUN chmod -v +x /run-httpd.sh
 
 CMD ["/run-httpd.sh"]
